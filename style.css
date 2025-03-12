@@ -1,0 +1,319 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 3rem;
+}
+
+p, li {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* navbar */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #77758B;
+    position: -webskit-stick;
+    position: sticky;
+    top: 0;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #19100E;
+    color: whitesmoke;
+}
+
+.active {
+    background-color: #CA9B92;
+    color: black;
+}
+
+/* hero */
+
+.hero {
+    position: relative;
+    background-image: url("./Captstone 2b/Assets copy/memusic.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero-content {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(0%, -50%);
+    transition: all ease 0.3s;
+}
+
+#hero-heading {
+    font-size: 60px;
+    margin: 0;
+    font-weight: 900;
+    text-align: left;
+    color: whitesmoke
+}
+
+.explore {
+    text-align: left;
+}
+
+button {
+    cursor: pointer;
+    margin: 1rem;
+    margin-left: 0;
+    color: black;
+    letter-spacing: 2px;
+    border: none;
+    background-color: #CA9B92;
+    border-radius: 30px;
+    width: 100px;
+    height: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: #77758B;
+    color: whitesmoke;
+}
+
+#hero-text {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    color: whitesmoke;
+    text-align: left;
+}
+
+.picture {
+    margin: 1rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+@media (max-width: 1090px) {
+    #hero-heading {
+        font-size: 60px;
+    }
+    #hero-text {
+        font-size: 20px; 
+    }
+}
+
+@media (max-width: 700px) {
+    .hero-content {
+        width: 400px;
+        padding; 20px;
+        top: 50%;
+        left: 37%;
+        transform: translate(-50%, -50%);
+    }
+    .explore {
+        text-align: center;
+    }
+}
+
+/* projects gallery */
+
+.projects {
+    width: 100vw;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    display: block;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.project-text-container {
+    text-align: left;
+    padding: 0;
+    padding-left: 10px;
+    margin: 0;
+}
+
+.project-text-container > h2 {
+    font-size: 3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    text-transform: capitalize;
+}
+
+.project-text-container > p {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin-bottom: 40px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.gallery {
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 0;
+    line-height: 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.description {
+    border-top: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #77758B;
+    color: whitesmoke;
+    font-size: 25px;
+    line-height: 20px;
+}
+
+@media (min-width: 768px) {
+
+    .gallery-container {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px;
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 300px;
+        min-height: 260px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .gallery img {
+        height: 220px;
+        width: 300px;
+        object-fit: fill;
+    }
+
+    .project-text-container {
+        padding-left: 0;
+    }
+
+    .description {
+        padding-bottom: 10px;
+        text-align: center;
+        padding-left: 0;
+        font-size: 1rem;
+    }
+}
+
+/* about */
+
+.about {
+    position: relative;
+    background-image: url("Captstone 2b/Assets copy/julien-riedel-xkgyg8jYmvw-unsplash-5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-container h2 {
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke
+}
+
+.music {
+    height: 100px;
+    width: 150px;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* contact */
+
+.contact {
+    position: relative;
+    width: 100vw;
+    padding-bottom: 50px;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.footer-text > h2 {
+    font-size: 3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.copyright {
+    position: absolute;
+    bottom: -30px;
+    right: 20px;
+    font-size: 14px;
+}
